@@ -17,7 +17,7 @@ async def search(value:str):
     return {"result":result}
 
 @app.get("/wiki/{name}/{length}")
-async def search_wiki(name:str,length:int):
+async def search_wiki_per_lenght(name:str,length:int):
     """Retrieve wikipedia page"""
 
     result=wikiLogic(name,length)
