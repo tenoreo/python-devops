@@ -17,7 +17,7 @@ async def search(value:str):
     return {"result":result}
 
 @app.get("/wiki/{name}/{length}")
-async def search(name:str,length:int):
+async def search_wiki(name:str,length:int):
     """Retrieve wikipedia page"""
 
     result=wikiLogic(name,length)
@@ -26,7 +26,7 @@ async def search(name:str,length:int):
 @app.get("/phrase/{name}")
 async def phrase(name:str):
     """Retrieve wikipedia page and return phrases"""
-    
+
     result=wikiphrases(name)
     return {"result":result}
 
